@@ -25,7 +25,7 @@ async def play(ctx, *, content: str):
         await ctx.send("You must be in a voice channel first!");
 
 @bot.command()
-async def leave(ctx, *, content: str):
+async def leave(ctx):
     if ctx.voice_client:
         await ctx.voice_client.disconnect()
         await ctx.send("Disconnected from the voice channel.")
@@ -33,7 +33,7 @@ async def leave(ctx, *, content: str):
         await ctx.send("I am not connected to any voice channel.")
 
 @bot.command()
-async def ping(ctx, *, content: str):
+async def ping(ctx):
     await ctx.send("Pong!")
 
 

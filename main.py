@@ -17,6 +17,10 @@ bot = commands.Bot(command_prefix="=", case_insensitive=True, intents=intents)
 async def play(ctx, *, content: str):
     await ctx.send("I can play " + content)
 
+@bot.command()
+async def ping(ctx, *, content: str):
+    await ctx.send("Pong!")
+
 
 if __name__ == "__main__":
     bot.run(TOKEN)
